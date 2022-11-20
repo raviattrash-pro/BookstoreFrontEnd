@@ -1,13 +1,17 @@
 import { Button, Typography, Box } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
-
+//import Announce from './Mycomponent/Announce';
+import "./Home.css";
+import Slider from "./Mycomponent/Slider";
 const Home = () => {
   return (
-    <div>
-      <Box display="flex" flexDirection="column" alignItems="center">
-        <Button
-          LinkComponent={Link}
+    <div className="HomeDiv">
+      <br />
+      <Slider />
+      <Box display="flex" flexDirection="column" alignItems="center" marginTop={-10}>
+        <Button className="btn1"
+          LinkComponent={Link}  
           to="/books"
           sx={{ marginTop: 15, background: "orangered" }}
           variant="contained"

@@ -14,7 +14,8 @@ const Books = () => {
   console.log(books);
  
   return (
-    <div>
+    <div className="bookDiv">
+      <h1 class="book-title">Availble Books</h1>
       <ul>
         {books &&
           books.map((book, i) => (

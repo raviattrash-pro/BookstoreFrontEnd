@@ -10,7 +10,7 @@ import {
   import axios from "axios";
   import React, { useState } from "react";
   import { useNavigate } from "react-router-dom";
-  
+  import "./Book/AddBook.css";
   const AddBook = () => {
     const history = useNavigate();
     const [inputs, setInputs] = useState({
@@ -50,9 +50,9 @@ import {
     };
   
     return (
-      <div style={{backgroundColor: 'lightblue'}}>
+      <div className="Addbookmain">
       <form onSubmit={handleSubmit}   >
-        <Box bgcolor="Plum" p={1}
+        <Box bgcolor="lightblue" p={1}
           display="flex"
           flexDirection="column"
           justifyContent={"center"}
@@ -61,8 +61,11 @@ import {
           alignSelf="center"
           marginLeft={"auto"}
           marginRight="auto"
-          marginTop={10}
+          marginTop={0}
+          borderRadius={2.5}
+          boxShadow ="0 8px 32px 0 rgba(30, 43, 223, 1)"
         >
+          <h1>BOOK Details</h1>
           <FormLabel>Name</FormLabel>
           <TextField
             value={inputs.name}

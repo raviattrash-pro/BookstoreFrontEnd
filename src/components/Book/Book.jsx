@@ -14,19 +14,21 @@ const Book = (props) => {
   };
 
   return (
+    
     <div className="card">
-      <img src={image} alt={name} />
+      <img  src={image} alt={name} />
       <article>By {author}</article>
       <h3>{name}</h3>
       <p>{description}</p>
-      <h3>Rs {price}</h3>
-      <Button LinkComponent={Link} to={`/books/${_id}`} sx={{ mt: "auto" }}>
+      <h3>₹{price}</h3>
+      <Button className="btn" LinkComponent={Link} to={`/books/${_id}`} sx={{ mt: "auto" }}>
         Update
       </Button>
-      <Button color="error" onClick={deleteHandler} sx={{ mt: "auto" }}>
+      <Button className="btn"  color="error" onClick={deleteHandler} sx={{ mt: "auto" }}>
         Delete
       </Button>
     </div>
+   
   );
 };
 

@@ -25,25 +25,84 @@
 
 .slider {
     border-radius: 10px;
-    margin-top: 20px;
     margin: auto;
-    height: 600px;
+    height: 500px;
     width: 900px;
-    height: 540px;
     background-color: lightblue;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    border-radius: 20px;
 }
 
-img {
-    margin-top: 20px;
+.imgdiv {
+    display: flex;
+    flex: 1;
     align-items: center;
-    width: 650px;
-    height: 420px;
+    justify-content: center;
+    height: 450px;
+}
+
+.imgcontent {
     border-radius: 20px;
     box-shadow: 0 8px 32px 0 rgba(30, 43, 223, 0.8);
     border: 1px solid rgba( 255, 255, 255, 0.18);
-    ;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contentp {
+    text-align: center;
+    font-size: 30px;
+    margin: auto;
+}
+
+.contenth {
+    text-align: center;
+    font-size: 55px;
+}
+
+.discription {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    place-items: start normal;
+    justify-items: baseline;
+    margin-left: 11px;
+    text-align: center;
+}
+
+.slideStyle {
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 450px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(30, 43, 223, 0.8);
+    border: 1px solid rgba( 255, 255, 255, 0.18);
+}
+
+.arrowStyle {
+    margin-bottom: 50px;
+    background-color: grey;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    border-radius: 9999px;
+}
+
+.shopbutton {
+    background-color: #8a4af3;
+    border-radius: 0.375rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    margin-top: 30px;
+    padding: 3px;
+    cursor: pointer;
+    margin: auto;
 }

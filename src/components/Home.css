@@ -1,15 +1,4 @@
 .HomeDiv {
     background-color: lightblue;
-    height: 700px;
-}
-
-.btn1 {
-    margin: auto;
-    border-radius: 20px;
-    box-shadow: 0 8px 32px 0 rgba(30, 43, 223, 1);
-    border: 1px solid rgba( 255, 255, 255, 0.18);
-}
-
-.btn {
-    border-radius: 20px;
+    height: 570px;
 }

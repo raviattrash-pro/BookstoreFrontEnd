@@ -9,8 +9,9 @@ import {
   import axios from "axios";
   import React, { useEffect, useState } from "react";
   import { useNavigate, useParams } from "react-router-dom";
+  import './BookDetails.css';
   
-  const BookDetail = () => {
+  const BookDetails = () => {
     const [inputs, setInputs] = useState();
     const id = useParams().id;
     const [checked, setChecked] = useState(false);
@@ -19,11 +20,13 @@ import {
       const fetchHandler = async () => {
         await axios
           .get(`http://localhost:5000/books/${id}`)
-          .then((res) => res.data)
-          .then((data) => setInputs(data.book));
+          .then((res)=> res.data)
+          .then((data)=> setInputs(data.book));
+
+          console.log("Fello call input :"+inputs);
       };
       fetchHandler();
-    }, [id]);
+    },[id]);
   
     const sendRequest = async () => {
       await axios
@@ -47,67 +50,75 @@ import {
         [e.target.name]: e.target.value,
       }));
     };
+
+    
   
     return (
-      <div>
+      <div className="update">
         {inputs && (
           <form onSubmit={handleSubmit}>
-            <Box
-              display="flex"
-              flexDirection="column"
-              justifyContent={"center"}
-              maxWidth={700}
-              alignContent={"center"}
-              alignSelf="center"
-              marginLeft={"auto"}
-              marginRight="auto"
-              marginTop={10}
+            <Box bgcolor="lightblue" p={1}
+          display="flex"
+          flexDirection="column"
+          justifyContent={"center"}
+          maxWidth={700}
+          alignContent={"center"}
+          alignSelf="center"
+          marginLeft={"auto"}
+          marginRight="auto"
+          marginTop={2}
+          marginBottom={2}
+          borderRadius={2.5}
+          boxShadow ="0 8px 32px 0 rgba(30, 43, 223, 1)"
             >
+              <h1 className="Updatetitle">Update BOOK Details</h1>
               <FormLabel>Name</FormLabel>
-              <TextField
+              <TextField className="inputupdate"
                 value={inputs.name}
                 onChange={handleChange}
                 margin="normal"
                 fullWidth
-                variant="outlined"
+                variant="standard"
                 name="name"
               />
               <FormLabel>Author</FormLabel>
-              <TextField
+              <TextField className="inputupdate"
                 value={inputs.author}
                 onChange={handleChange}
                 margin="normal"
                 fullWidth
-                variant="outlined"
+                variant="standard"
+                
                 name="author"
               />
               <FormLabel>Description</FormLabel>
-              <TextField
+              <TextField className="inputupdate"
                 value={inputs.description}
                 onChange={handleChange}
                 margin="normal"
                 fullWidth
-                variant="outlined"
+                variant="standard"
                 name="description"
               />
               <FormLabel>Price</FormLabel>
-              <TextField
+              <TextField className="inputupdate"
                 value={inputs.price}
                 onChange={handleChange}
                 type="number"
                 margin="normal"
                 fullWidth
-                variant="outlined"
+                variant="standard"
                 name="price"
               />
               <FormLabel>Image</FormLabel>
-              <TextField
+              <TextField className="inputupdate"
                 value={inputs.image}
                 onChange={handleChange}
                 margin="normal"
                 fullWidth
-                variant="outlined"
+                variant="standard"
                 name="image"
+
               />
               <FormControlLabel
                 control={
@@ -129,4 +140,4 @@ import {
     );
   };
   
-  export default BookDetail;
+  export default BookDetails;

@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import Books from './components/Book/Books';
 import About from "./components/About";
 import AddBook from "./components/AddBook";
+import BookDetails from "./components/Book/BookDetails";
 
 function App() {
     return <React.Fragment >
@@ -39,6 +40,11 @@ function App() {
         <
         Route path = "/about"
     element = { < About / > }
+    exact / >
+
+        <
+        Route path = "/books/:id"
+    element = { < BookDetails / > }
     exact / >
 
 

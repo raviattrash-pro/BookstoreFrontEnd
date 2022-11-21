@@ -9,11 +9,11 @@ const Home = () => {
     <div className="HomeDiv">
       <br />
       <Slider />
-      <Box display="flex" flexDirection="column" alignItems="center" marginTop={-10}>
-        <Button className="btn1"
+      <Box display="flex" flexDirection="column" alignItems="center" marginTop={0}>
+        <Button 
           LinkComponent={Link}  
           to="/books"
-          sx={{ marginTop: 15, background: "orangered" }}
+          sx={{ marginTop:-4, background: "orangered" }}
           variant="contained"
         >
           <Typography variant="h3">View All products</Typography>

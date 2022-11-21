@@ -13,6 +13,8 @@ const Book = (props) => {
       .then(() => history("/books"));
   };
 
+ 
+
   return (
     
     <div className="card">
@@ -21,10 +23,10 @@ const Book = (props) => {
       <h3>{name}</h3>
       <p>{description}</p>
       <h3>₹{price}</h3>
-      <Button className="btn" LinkComponent={Link} to={`/books/${_id}`} sx={{ mt: "auto" }}>
+      <Button LinkComponent={Link} to={`/books/${_id}`}    sx={{ mt: "auto" }} className="btn2" >
         Update
       </Button>
-      <Button className="btn"  color="error" onClick={deleteHandler} sx={{ mt: "auto" }}>
+      <Button  className="btn2"  color="error" onClick={deleteHandler} sx={{ mt: "auto" }}>
         Delete
       </Button>
     </div>

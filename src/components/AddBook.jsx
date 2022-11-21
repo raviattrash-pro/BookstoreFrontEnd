@@ -61,55 +61,56 @@ import {
           alignSelf="center"
           marginLeft={"auto"}
           marginRight="auto"
-          marginTop={0}
+          marginTop={2}
+          marginBottom={2}
           borderRadius={2.5}
           boxShadow ="0 8px 32px 0 rgba(30, 43, 223, 1)"
         >
-          <h1>BOOK Details</h1>
+          <h1 className="titleBook">BOOK Details</h1>
           <FormLabel>Name</FormLabel>
-          <TextField
+          <TextField className="Addbookinput"
             value={inputs.name}
             onChange={handleChange}
             margin="normal"
             fullWidth
-            variant="outlined"
+            variant="standard"
             name="name"
           />
           <FormLabel>Author</FormLabel>
-          <TextField
+          <TextField className="Addbookinput"
             value={inputs.author}
             onChange={handleChange}
             margin="normal"
             fullWidth
-            variant="outlined"
+            variant="standard"
             name="author"
           />
           <FormLabel>Description</FormLabel>
-          <TextField
+          <TextField className="Addbookinput"
             value={inputs.description}
             onChange={handleChange}
             margin="normal"
             fullWidth
-            variant="outlined"
+            variant="standard"
             name="description"
           />
           <FormLabel>Price</FormLabel>
-          <TextField
+          <TextField className="Addbookinput"
             value={inputs.price}
             onChange={handleChange}
             type="number"
             margin="normal"
             fullWidth
-            variant="outlined"
+            variant="standard"
             name="price"
           />
           <FormLabel>Image</FormLabel>
-          <TextField
+          <TextField className="Addbookinput"
             value={inputs.image}
             onChange={handleChange}
             margin="normal"
             fullWidth
-            variant="outlined"
+            variant="standard"
             name="image"
           />
           <FormControlLabel
